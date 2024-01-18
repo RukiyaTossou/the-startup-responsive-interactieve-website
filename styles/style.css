@@ -115,17 +115,22 @@
    max-width: 25rem;
    padding:0.5rem;
    justify-content: space-between;
-
-
 }
 .ul-images-people li{
- 
    width: 7.4rem; /* Set the width of each li to half with a small margin */
    display: flex;
    flex-wrap: wrap;
   width: calc(50% - 0.3rem);
+}
 
-   
+.logo-img{
+   height:4rem;
+   width: 3rem;
+   position: relative;
+   /* in het midden van het scherm */
+   left:50%; 
+   transform: translateX(-50%);
+ 
 }
 /* filters */
 .filters-all{
