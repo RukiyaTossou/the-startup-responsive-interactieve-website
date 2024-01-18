@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="q42.nl" />
+
+  <!-- APPLE -->
+  <meta name="apple-mobile-web-app-title" content="Q42" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- ICONS -->
+  <link href="/images/touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"
+    sizes="57x57" />
+  <link href="/images/touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"
+    sizes="76x76" />
+  <link href="/images/touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"
+    sizes="120x120" />
+  <link href="/images/touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"
+    sizes="152x152" />
+  <link href="/images/touch-icon-180x180-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png"
+    sizes="180x180" />
+  <link href="/images/touch-icon-192x192.png" rel="apple-touch-icon-precomposed" type="image/png" sizes="192x192" />
+  <link href="/images/touch-icon-precomposed.png" type="image/png" />
+
+  <!-- MS TILES -->
+  <meta name="theme-color" content="#84bc2d" />
+  <meta name="msapplication-square70x70logo" content="/images/mstile-128x128.png" />
+  <meta name="msapplication-square150x150logo" content="/images/mstile-270x270.png" />
+  <meta name="msapplication-wide310x150logo" content="/images/mstile-558x270.png" />
+  <meta name="msapplication-square310x310logo" content="/images/mstile-558x558.png" />
+  <meta name="msapplication-TileColor" content="#84bc2d" />
+
+  <link rel="preload" href="/fonts/tisa-sans-web-pro-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/tisa-sans-web-pro-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/proxima-nova-900.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="main.js" async></script>
+  <script src="https://storage.googleapis.com/static.q42.nl/q42.js" async></script>
+
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Q42</title>
+    <title>Q42 mensen</title>
 </head>
 <body>
     <div class="toggle-button">
@@ -12,7 +53,6 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
-    
 
     <nav class="nav-bar">
         <li><a href="#">Home</a></li>
@@ -22,25 +62,63 @@
         <li><a href="#">Mensen</a></li>
         <li><a href="#">Nieuws</a></li>
     </nav>
+
     <h1>
         De mensen van Q42
     </h1>
     <p>
         Onze mensen noemen we Q'ers. Maar wie zijn dat dan? Die Q'ers die het internet aan het afmaken zijn?
-         Check ze allemaal hieronder. 
-         En wil je ook Q'er worden, scroll dan even voorbij onze hoofden voor de openstaande vacatures!
-
+         Check ze allemaal hieronder.   
     </p>
+
     <h2>Filters</h2>
     <div class="filters">
-        <ul>
-            <li><img src="./docs/images/bart-pfp-normaal.jpg" alt="bart-img-normaal"> <img class="art-img" src="./docs/images/bart_art.jpeg" alt="bart-img-art"></li>
-            <li><img src="./docs/images/layla-pfp-normaal.jpg" alt="layla-img-normaal"> <img src="./docs/images/layla_art.jpeg" alt="layla-img-art"></li>
-            <li></li>
-            <li></li>
-        </ul>
+        <button class="filters-all">Short hair don't care</button>
+        <button class="filters-all">Is stiekem een designer</button>
+        <button class="filters-all">Front-end</button>
+        <button class="filters-all">Harry Potter fan</button>
+        <button class="filters-all">Partner van de club</button>
     </div>
-    <section class="objecten">
+        <ul class="images-people">
+            <li>
+                <img  class="img-normaal" src="./docs/images/bart-pfp-normaal.jpg" alt="bart-img-normaal"> 
+                <img class="art-img" src="./docs/images/bart_art.jpeg" alt="bart-img-art">
+                <p>
+                    Bart
+                    bart@q42.nl
+                    short hair don't care
+                </p>
+            </li>
+            <li>
+                <img class="img-normaal" src="./docs/images/layla-pfp-normaal.jpg" alt="layla-img-normaal">
+                 <img  class="art-img"src="./docs/images/layla_art.jpeg" alt="layla-img-art">
+                 <p>
+                    Layla
+                    Layla@q42.nl
+                    Front-end
+                </p>
+            </li>
+            <li>
+                <img class="img-normaal" src="./docs/images/chris-pfp-normaal.jpg" alt="">
+                 <img class="art-img" src="./docs/images/chris_art.jpeg" alt="">
+                 <p>
+                    Chris
+                    Chris@q42.nl
+                    Partner van de club
+                </p>
+            </li>
+            <li>
+                <img class="img-normaal" src="./docs/images/bob-pfp-normaal.jpg" alt="" >
+                <img class="art-img" src="./docs/images/bob_art.jpeg" alt="">
+                <p>
+                    bob
+                    bob@q42.nl
+                    Front-end 
+                </p>
+            </li>
+        </ul>
+  
+    <section class="objects">
 
     </section>
 </body>
