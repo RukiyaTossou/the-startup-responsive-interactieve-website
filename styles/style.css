@@ -102,30 +102,52 @@
 .img-normaal{
    object-fit:cover ;
    width: 10rem;
-   height: 13rem;
+   height: 12rem;
 
 }
 .art-img{
    display: none;
 }
-.images-people{
+.ul-images-people{
    list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 25rem;
+   padding:0.5rem;
+   justify-content: space-between;
+
+
 }
-.images-people li{
+.ul-images-people li{
+ 
+   width: 7.4rem; /* Set the width of each li to half with a small margin */
+   display: flex;
+   flex-wrap: wrap;
+  width: calc(50% - 0.3rem);
+
    
+}
+/* filters */
+.filters-all{
+   background-color: #f7ffc6;
+   cursor: pointer;
+   border-style: none;
+   
+}
+.filters-all:hover{
+   background-color: var(--nav-tekst-kleur);
+
 }
   /* MEDIA QUERIES */
   /* Moblie */
   @media (max-width: 600px) {
-   .nav-bar{
-      
+   .ul-images-people{
    }
-   
+  
   }
   /* tablet */
   @media (min-width:601px) and (max-width:1270px){
-   .nav-bar{
-      
+   .nav-bar{   
    }
    
 .nav-bar li{
