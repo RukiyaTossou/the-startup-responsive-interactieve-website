@@ -1,0 +1,58 @@
+/* --global-- */
+:root {
+   --lichte-achtergrond: #fff;
+   --nav-tekst-kleur:#84BC2D;
+   --tekst-op-lichte-achterground:#212121;
+   --rounded: .4rem;
+   --pilled: 1.4rem;
+   --shadow: .3rem;
+   --border: .15rem;
+}
+
+body{
+   margin: 1rem; 
+   padding: 0;
+   font-family: "Open Sans", sans-serif;
+   font-size: 1.2rem;
+   line-height: 1.4;
+}
+
+/* nav bar */
+.nav-bar{
+   list-style: none;
+}
+
+.nav-bar li{
+   display: inline-block;
+}
+
+.nav-bar a{
+   text-decoration: none;
+   color:var(--nav-tekst-kleur);
+}
+
+ .bar{
+   background-color:var(--nav-tekst-kleur);
+   color: var(--nav-tekst-kleur);
+}
+.art-img{
+   display: none;
+}
+  /* MEDIA QUERIES */
+  /* Moblie */
+  @media (max-width: 600px) {
+   .nav-bar{
+      display: none;
+   }
+   
+  }
+  /* tablet */
+  @media (min-width:601px) and (max-width:1270px){
+   .nav-bar{
+      
+   }
+  }
+  /* desktop */
+  @media (min-width: 1270px) {
+  
+  }
