@@ -99,6 +99,7 @@
    background-color:var(--nav-tekst-kleur);
    color: var(--nav-tekst-kleur);
 }
+
 /* images */
 .img-normaal{
    object-fit:cover ;
@@ -137,14 +138,19 @@
 .show-all-filters{
    background-color: #ffffff;
    border-style: none;
-
+   border-radius: 5px;
+   padding: 0.2rem 1rem;
+   margin-bottom: 1rem;
 }
 .filters-all{
-   background-color: #f7ffc6;
-   cursor: pointer;
+   background-color: #b8d3b7;
+   cursor: pointer;  
    border-style: none;
-   
+   border-radius: 10px;
+   padding: 0.5rem;
+   box-shadow: 0px 1px 2px    #212121;
 }
+
 .filters-all:hover{
    background-color: var(--nav-tekst-kleur);
 
@@ -198,13 +204,13 @@
      max-width: 6rem;
    }
  }
- 
-
 
   /* desktop */
   @media (min-width: 1024px) {
    body{
+      
       padding-left:5rem;
+    
      }
   .ul-images-people {
      max-width: 60rem;
@@ -217,5 +223,12 @@
    }
 .nav-bar li{
    display: inline-block;
+   padding: 3rem;
+   position: relative;
+   left: 25%;
+   transform: translateX(-50%);
+}
+#Onze-mensen-tekst{
+   max-width:39rem;
 }
   }
