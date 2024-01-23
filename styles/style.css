@@ -64,6 +64,7 @@
  * {
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
+   margin:0 auto;
  }
  
  body {
@@ -71,9 +72,11 @@
    color: #41453b;
    font-family:"ff-tisa-sans-web-pro", sans-serif;
    overflow-x: hidden;
-   padding: 0.5rem;  
- }
+   padding: 0.5rem;
  
+    
+  }
+  
  .heading,
  h1,
  h2,
@@ -188,8 +191,9 @@ button.active{
 }
 /* tekst */
 
-#Onze-mensen-tekst{
+.Onze-mensen-tekst{
    max-width:30rem;
+   align-items: center;
 }
   /* MEDIA QUERIES */
   /* Moblie */
@@ -202,6 +206,30 @@ button.active{
   @media (max-width: 600px) {
    .ul-images-people{
    }
+   .Onze-mensen-tekst{
+    max-width:30rem;
+    text-align: center;
+    margin: 0 auto;
+    padding:2rem 0.7rem;
+ }
+   h1{
+    text-align: center;
+     padding-left:1rem;
+   }
+   .logo-img{
+    position: absolute;
+    top:4%;
+    left: 50%;
+   transform: translate(-50%, -50%)
+  }
+    .show-all-filters{
+   position:relative;
+   left:2rem;
+  }
+  .filters{
+    padding-left: 2rem;
+   
+  }
   }
   /* tablet */
 @media (min-width: 601px) and (max-width: 720px) {
@@ -215,13 +243,37 @@ button.active{
    .ul-images-people li {
      flex: 0 0 calc(30% - 1rem);
      margin-bottom: 1rem;
-     display: flex;
+   
      flex-direction: column;
    }
  
    .info-text-img {
      max-width: 6rem;
    }
+   .Onze-mensen-tekst{
+    max-width:30rem;
+    text-align: center;
+    margin: 0 auto;
+    padding:3rem;
+ }
+  h1{
+    text-align: center;
+     padding-left:1rem;
+   }
+ .show-all-filters{
+   position:relative;
+   left:5rem;
+  }
+  .filters{
+    padding-left: 5rem;
+   
+  }
+ .logo-img{
+    position: absolute;
+    top:4%;
+    left: 50%;
+   transform: translate(-50%, -50%)
+  }
  }
  
  /* Additional tablet */
@@ -239,14 +291,38 @@ button.active{
    .info-text-img {
      max-width: 6rem;
    }
- }
+  .logo-img{
+    position: absolute;
+    top:4%;
+    left: 50%;
+   transform: translate(-50%, -50%)
+  }
+  h1{
+   text-align:center;
+   padding:1rem;
+  }
+  .Onze-mensen-tekst{
+   max-width:40rem;
+   text-align: center;
+   margin: 0 auto;
+   padding:2rem;
+}
+  .show-all-filters{
+   position:relative;
+   left:5rem;
+  }
+  .filters{
+    padding-left: 5rem;
+  }
+}
+ 
 
   /* desktop */
   @media (min-width: 1024px) {
    body{
       text-align: center;
       padding-left:5rem;
-    
+     
    }
   .ul-images-people {
      max-width: 60rem;
@@ -257,14 +333,29 @@ button.active{
      display: flex;
      flex-direction: column;
    }
+
+  .logo-img{
+    position: absolute;
+  top:4%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+  }
 .nav-bar li{
    display: inline-block;
    padding: 3rem;
-   position: relative;
-   left: 25%;
    transform: translateX(-50%);
 }
-#Onze-mensen-tekst{
-   max-width:39rem;
+
+.show-all-filters{
+  position:relative;
+  right:18rem;
+ }
+ 
+.Onze-mensen-tekst{
+   max-width:40rem;
+   text-align: center;
+   margin: 0 auto;
+   padding:2rem;
 }
-  }
+
+}
