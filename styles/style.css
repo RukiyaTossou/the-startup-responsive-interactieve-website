@@ -1,5 +1,6 @@
 /* --global-- */
 :root {
+  /* kleur */
    --lichte-achtergrond: #fff;
    --nav-tekst-kleur:#84BC2D;
    --tekst-op-lichte-achterground:#212121;
@@ -7,7 +8,11 @@
    --pilled: 1.4rem;
    --shadow: .3rem;
    --border: .15rem;
+   /* font */
+   --headings-font-family:"proxima-nova", sans-serif;
+   --headings-font-weight:900;
 }
+
 @font-face {
    font-family: "ff-tisa-sans-web-pro";
    font-display: swap;
@@ -55,6 +60,7 @@
    font-weight: 300;
    font-style: normal;
  }
+
  * {
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
@@ -63,7 +69,7 @@
  body {
    -webkit-font-smoothing: antialiased;
    color: #41453b;
-   font-family: ff-tisa-sans-web-pro, sans-serif;
+   font-family:"ff-tisa-sans-web-pro", sans-serif;
    overflow-x: hidden;
    padding: 0.5rem;  
  }
@@ -74,12 +80,10 @@
  h3,
  h4,
  h5 {
-   font-family: proxima-nova, sans-serif;
-   font-weight: 900;
+   font-family: var(--headings-font-family);
+   font-weight: var(--headings-font-weight);
    line-height: 110%;
  }
-
-
 
 /* nav bar */
 .nav-bar{
@@ -135,9 +139,12 @@
  
 }
 /* filters */
+.filters{
+  display: none;
+}
 .show-all-filters{
-   background-color: #ffffff;
-   border-style: none;
+   background-color: #92c6a3;
+   border-color: #3b9c50;
    border-radius: 5px;
    padding: 0.2rem 1rem;
    margin-bottom: 1rem;
@@ -148,12 +155,41 @@
    border-style: none;
    border-radius: 10px;
    padding: 0.5rem;
+   margin:0.2rem;
    box-shadow: 0px 1px 2px    #212121;
 }
-
+/* hovers */
 .filters-all:hover{
    background-color: var(--nav-tekst-kleur);
 
+}
+
+.show-all-filters:hover{
+  background-color: #b8d3b7;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+button.active{
+  background-color: #3b9c50;
+  color: #fff;
+  cursor: pointer;  
+   border-style: none;
+   border-radius: 10px;
+   padding: 0.5rem;
+   margin:0.2rem;
+   box-shadow: 0px 1px 2px    #212121;
+
+}
+/* tekst */
+
+#Onze-mensen-tekst{
+   max-width:30rem;
 }
   /* MEDIA QUERIES */
   /* Moblie */
@@ -208,10 +244,10 @@
   /* desktop */
   @media (min-width: 1024px) {
    body{
-      
+      text-align: center;
       padding-left:5rem;
     
-     }
+   }
   .ul-images-people {
      max-width: 60rem;
    }
