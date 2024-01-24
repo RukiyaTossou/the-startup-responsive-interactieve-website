@@ -1,23 +1,36 @@
 // quereySelectors
 // filters
 let filterButtons = document.querySelectorAll('.filters');
-let allImages = document.querySelectorAll('.ul-images-people li');
+let allImages = document.querySelectorAll('.img-li');
 let showAllFiltersButton = document.querySelector('.show-all-filters');
 let shortHairButton = document.querySelector('.filters-all[data-filters="short-hair"]');
 let FrontEndButton = document.querySelector('.filters-all[data-filters="Front-end"]');
+let teskst = document.querySelector('.Onze-mensen-tekst');
 let Logo = document.querySelectorAll('.shake');
-let filter = 'all';
+
 
 // menu
 let menuButton = document.querySelector('.menu-button');
 let menu = document.querySelector('.ul-navbar');
 let menuButtonClose = document.querySelector('.colse-icon');
 
+
 // event listeners
 showAllFiltersButton.addEventListener('click', showAllFilters);
-shortHairButton.addEventListener('click', showFilteredImages); 
+shortHairButton.addEventListener('click',change); 
 // Logo.addEventListener('click', shake);
 menuButton.addEventListener('click', menuToggle)
+
+function change(){
+    console.log('Toggle All Images function called');
+
+    // Loop through each element with class 'img-li'
+    Array.from(allImages).forEach(imgItem => {
+        imgItem.classList.toggle('hidden');
+        console.log(`After toggle: ${imgItem.classList.contains('hidden')}`);
+    });
+}
+  
 
 // menu toggle functie
 function menuToggle(){
@@ -42,32 +55,32 @@ function showAllFilters() {
     });
 }
 
-function showOnlyShortHairImg(){
-    filterButtons.forEach(button => {
-        button.classList.toggle('show');
-    });
+// function showOnlyShortHairImg(){
+//     filterButtons.forEach(button => {
+//         button.classList.toggle('show');
+//     });
     
 
-}
+// }
 
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        let filter = this.getAttribute('data-filters');
-        showFilteredImages(filter);
-    });
-});
+// filterButtons.forEach(button => {
+//     button.addEventListener('click', function() {
+//         let filter = this.getAttribute('data-filters');
+//         showFilteredImages(filter);
+//     });
+// });
 
-function showFilteredImages(filter) {
-    allImages.forEach(imgItem => {
-        let imgDataFilters = imgItem.getAttribute('data-filters');
-        if (imgDataFilters === filter) {
-            imgItem.classList.remove('hidden');
-        } else {
-            imgItem.classList.add('hidden');
-        }
-    });
-}
+// function showFilteredImages(filter) {
+//     allImages.forEach(imgItem => {
+//         let imgDataFilters = imgItem.getAttribute('data-filters');
+//         if (imgDataFilters === filter) {
+//             imgItem.classList.remove('hidden');
+//         } else {
+//             imgItem.classList.add('hidden');
+//         }
+//     });
+// }
    
 
 

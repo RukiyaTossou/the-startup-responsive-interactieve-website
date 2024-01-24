@@ -152,7 +152,7 @@
 
 .ul-images-people li{
    width: 7.4rem; /* Set the width of each li to half with a small margin */
-   display: flex;
+   /* display: flex; */
    flex-wrap: wrap;
   width: calc(50% - 0.3rem);
 }
@@ -399,7 +399,6 @@ button.active{
  
    .ul-images-people li {
      flex: 0 0 calc(25% - 1rem);
-     display: flex;
      flex-direction: column;
    }
  
@@ -483,11 +482,12 @@ button.active{
   left: 50%;
   transform: translate(-50%, -50%)
   }
-.nav-bar li{
+.ul-navbar li{
    display: inline-block;
    padding: 3rem;
    transform: translateX(-50%);
 }
+
 
 .show-all-filters{
   position:relative;
