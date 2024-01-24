@@ -429,7 +429,7 @@ button.active{
    top:2rem;
    right:rem;
    min-width: 10rem;
-  display: none; /* Hide the menu on mobile by default */
+  /* display: none; /* Hide the menu on mobile by default */ */
    
   }
 
