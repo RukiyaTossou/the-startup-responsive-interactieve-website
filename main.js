@@ -104,12 +104,10 @@ Array.from(allImages).forEach(imgItem => {
 
 // menu toggle functie
 function menuToggle(){
-    if (menu.style.display === 'block'){
-        console.log('Menu is currently visible. Hiding it.');
-        menu.style.display = 'none';
-    } else{
-        console.log('Menu is currently hidden. Showing it.');
+    if (menu.style.display === 'none'){
         menu.style.display = 'block';
+    } else{
+        menu.style.display = 'none';
     }
 }
 function showFilteredImages(filter) {
@@ -134,40 +132,3 @@ function showAllFilters() {
         button.classList.toggle('show');
     });
 }
-
-// function showOnlyShortHairImg(){
-//     filterButtons.forEach(button => {
-//         button.classList.toggle('show');
-//     });
-    
-
-// }
-
-
-// filterButtons.forEach(button => {
-//     button.addEventListener('click', function() {
-//         let filter = this.getAttribute('data-filters');
-//         showFilteredImages(filter);
-//     });
-// });
-
-// function showFilteredImages(filter) {
-//     allImages.forEach(imgItem => {
-//         let imgDataFilters = imgItem.getAttribute('data-filters');
-//         if (imgDataFilters === filter) {
-//             imgItem.classList.remove('hidden');
-//         } else {
-//             imgItem.classList.add('hidden');
-//         }
-//     });
-// }
-   
-
-
-
-// filterButtons.forEach(button => {
-//     button.addEventListener('click', function() {
-//         filter = this.getAttribute('data-filters');
-//         showFilteredImages();
-//     });
-// });

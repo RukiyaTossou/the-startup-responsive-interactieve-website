@@ -4,17 +4,18 @@
    --lichte-achtergrond: #fff;
    --nav-tekst-kleur:#84BC2D;
    --tekst-op-lichte-achterground:#212121;
-   --rounded: .4rem;
+  --rounded: .4rem;
    --pilled: 1.4rem;
    --shadow: .3rem;
    --border: .15rem;
    /* font */
-   --headings-font-family:"proxima-nova", sans-serif;
+   --headings-font-family:
+  "proxima-nova", sans-serif;
    --headings-font-weight:900;
    /* buttons */
    --show-all-filters-background:#fff;
    --show-all-filters-background-hover:#84BC2D;
-   --show-all-filters-background-border-color:#749450;;
+   --show-all-filters-background-border-color:#749450;
 }
 
 @font-face {
@@ -77,8 +78,6 @@
    font-family:"ff-tisa-sans-web-pro", sans-serif;
    overflow-x: hidden;
    padding: 0.5rem;
- 
-    
   }
   
  .heading,
@@ -94,12 +93,11 @@
 /* Hamburger menu */
 .menu-button{
   position: relative;
- top:2rem;
- left:4rem;
-  color: var(--nav-tekst-kleur) ;
- border-style:none;
- background:transparent;
-
+  top:2rem;
+  left:4rem;
+  color: var(--nav-tekst-kleur);
+  border-style:none;
+  background:transparent;
 }
 .hamburger-icon{
   color: var(--nav-tekst-kleur);
@@ -277,8 +275,9 @@ button.active{
 
   @media (max-width: 600px) {
     .ul-navbar{
+      
       list-style: none;
-        position:fixed;
+      position:fixed;
      top:6rem;
      left:-2rem;
      width:15rem;
@@ -287,6 +286,10 @@ button.active{
      background-color:#e0dfdf;
      padding:4rem;
     }
+    .ul-navbar {
+      display: none; /* Hide the menu on mobile by default */
+    }
+  
     .ul-navbar li{
      padding:1rem;
     }
@@ -326,27 +329,24 @@ button.active{
 @media (min-width: 601px) and (max-width: 720px) {
   .ul-navbar{
     list-style: none;
-      position:fixed;
-   top:6rem;
-   left:-2rem;
-   width:15rem;
-   height:55rem;
-   z-index:2;
-   background-color:#e0dfdf;
-   padding:4rem;
+    position:fixed;
+    top:6rem;
+    left:-2rem;
+    width:15rem;
+    height:55rem;
+    z-index:2;
+    background-color:#e0dfdf;
+    padding:4rem;
   }
   .ul-navbar li{
    padding:1rem;
-  }
-  .menu-button {
-    display: inline-block; /* Show the menu button on mobile */
+
   }
 
-  .ul-navbar.show-mobile {
-    display:none; /* Show the menu on mobile when the class is added */
+  .ul-navbar {
+    display: none; /* Hide the menu on mobile by default */
+   
   }
-
-    
 
    .ul-images-people {
      max-width: 40rem;
@@ -394,9 +394,9 @@ button.active{
  }
  
  /* Additional tablet */
- @media (min-width: 720px) and (max-width: 1023px) {
+ @media (min-width: 720px) and (max-width: 1070px) {
     body{
-      text-align: center;
+      text-align:center;
       padding-left:5rem;
      
    }
@@ -412,30 +412,34 @@ button.active{
    .info-text-img {
      max-width: 6rem;
    }
+  
   .logo-img{
     position: absolute;
-    top:4%;
-    left: 50%;
-   transform: translate(-50%, -50%)
+  top:4%;
+  left: 50%;
+  transform: translate(-50%, -50%)
   }
-  .menu-button{
-    display:none;
-  }
-  .hamburger-icon{
-     display:none;
-  }
-  .ul-navbar{
-  position:relative;
+.ul-navbar li{
+   display: inline-block;
+   padding: 1rem;
+   transform: translateX(-50%);
+}
+.ul-navbar{
+   position:relative;
    top:2rem;
-   right:1rem;
-
+   right:rem;
+   min-width: 10rem;
+  display: none; /* Hide the menu on mobile by default */
    
   }
-  .ul-navbar li{
-    display: inline-block;
-    padding: 1.4rem;
-    transform: translateX(-50%);
- }
+
+  .menu-button{
+   display:none;
+  }
+  .hamburger-icon{
+   display:none;
+   
+  }
   
   h1{
    text-align:center;
@@ -459,11 +463,10 @@ button.active{
  
 
   /* desktop */
-  @media (min-width: 1024px) {
+  @media (min-width: 1071px) {
    body{
-      text-align: center;
+     text-align:center;
       padding-left:5rem;
-     
    }
    /* Hamburger menu */
 .menu-button{
@@ -474,6 +477,7 @@ button.active{
 }
 
   .ul-images-people {
+   
      max-width: 60rem;
    }
  
@@ -482,6 +486,10 @@ button.active{
      /* display: flex; */
      flex-direction: column;
    }
+   .ul-navbar {
+ 
+  }
+
 
   .logo-img{
     position: absolute;
