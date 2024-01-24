@@ -103,13 +103,14 @@ Array.from(allImages).forEach(imgItem => {
 
 
 // menu toggle functie
-function menuToggle(){
-    if (menu.style.display === 'none'){
+function menuToggle() {
+      if (menu.style.display === 'none') {
         menu.style.display = 'block';
-    } else{
+      } else {
         menu.style.display = 'none';
+      }
     }
-}
+
 function showFilteredImages(filter) {
     allImages.forEach(imgItem => {
         let imgDataFilters = imgItem.getAttribute('data-filters');

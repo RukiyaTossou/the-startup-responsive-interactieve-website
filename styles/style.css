@@ -112,12 +112,13 @@
 .ul-navbar{
    list-style: none;
    padding: 3rem;
+   display: block;
 }
 
 
 .nav-bar a{
    text-decoration: none;
-   color:var(--nav-tekst-kleur);
+   color:#fff;
 }
 
  .bar{
@@ -283,7 +284,8 @@ button.active{
      width:15rem;
      height:55rem;
      z-index:2;
-     background-color:#e0dfdf;
+     background-color:#84bc2d;;
+     color: #212121;
      padding:4rem;
     }
     .ul-navbar {
@@ -335,7 +337,7 @@ button.active{
     width:15rem;
     height:55rem;
     z-index:2;
-    background-color:#e0dfdf;
+    background-color:#84bc2d;
     padding:4rem;
   }
   .ul-navbar li{
@@ -429,9 +431,12 @@ button.active{
    top:2rem;
    right:rem;
    min-width: 10rem;
-  /* display: none; /* Hide the menu on mobile by default */ */
-   
-  }
+  display: block; 
+   }
+
+   .nav-bar a{
+    color:var(--nav-tekst-kleur);
+ }
 
   .menu-button{
    display:none;
@@ -487,8 +492,11 @@ button.active{
      flex-direction: column;
    }
    .ul-navbar {
- 
+    display: block;
   }
+  .nav-bar a{
+    color:var(--nav-tekst-kleur);
+ }
 
 
   .logo-img{
