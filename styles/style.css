@@ -145,7 +145,7 @@
    list-style: none;
    display: flex;
    flex-wrap: wrap;
-   max-width: 20rem;
+   /* max-width: 20rem; */
    padding:0.5rem;
    justify-content: space-between;
 }
@@ -338,6 +338,13 @@ button.active{
   .ul-navbar li{
    padding:1rem;
   }
+  .menu-button {
+    display: inline-block; /* Show the menu button on mobile */
+  }
+
+  .ul-navbar.show-mobile {
+    display:none; /* Show the menu on mobile when the class is added */
+  }
 
     
 
@@ -472,7 +479,7 @@ button.active{
  
    .ul-images-people li {
      flex: 0 0 calc(15% - 1rem);
-     display: flex;
+     /* display: flex; */
      flex-direction: column;
    }
 

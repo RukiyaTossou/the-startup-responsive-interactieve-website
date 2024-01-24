@@ -5,6 +5,9 @@ let allImages = document.querySelectorAll('.img-li');
 let showAllFiltersButton = document.querySelector('.show-all-filters');
 let shortHairButton = document.querySelector('.filters-all[data-filters="short-hair"]');
 let FrontEndButton = document.querySelector('.filters-all[data-filters="Front-end"]');
+let PartnerVanDeClubButton = document.querySelector('.filters-all[data-filters="Partner-van-de-club"]')
+let IsStiekemEenDesignerButton = document.querySelector('.filters-all[data-filters="Is-stiekem-een-designer"]');
+let HarryPotterfanButton = document.querySelector('.filters-all[data-filters="HarryPotterfan"]');
 let teskst = document.querySelector('.Onze-mensen-tekst');
 let Logo = document.querySelectorAll('.shake');
 
@@ -17,20 +20,87 @@ let menuButtonClose = document.querySelector('.colse-icon');
 
 // event listeners
 showAllFiltersButton.addEventListener('click', showAllFilters);
-shortHairButton.addEventListener('click',change); 
+shortHairButton.addEventListener('click',showOnlyShortHairImg);
+FrontEndButton.addEventListener('click',showOnlyFrontEndImg);
+PartnerVanDeClubButton.addEventListener('click',showOnlyPartnerVanDeClubImg);
+HarryPotterfanButton.addEventListener('click',showOnlyHarryPotterfanImg);
+IsStiekemEenDesignerButton.addEventListener('click', showOnlyIsStiekemEenDesignerImg);
+
 // Logo.addEventListener('click', shake);
 menuButton.addEventListener('click', menuToggle)
 
-function change(){
-    console.log('Toggle All Images function called');
-
+function showOnlyShortHairImg(){
     // Loop through each element with class 'img-li'
     Array.from(allImages).forEach(imgItem => {
-        imgItem.classList.toggle('hidden');
-        console.log(`After toggle: ${imgItem.classList.contains('hidden')}`);
+        // If the data-filters attribute is present and its value is not 'short-hair'
+        if (imgItem.hasAttribute('data-filters') && imgItem.getAttribute('data-filters') !== 'short-hair') {
+            // Voeg de 'hidden' klasse toe
+            imgItem.classList.add('hidden');
+        } else {
+            // Als de 'hidden' klasse al is toegevoegd, verwijder deze
+            imgItem.classList.remove('hidden');
+        }
     });
 }
-  
+function showOnlyPartnerVanDeClubImg(){
+       // Loop through each element with class 'img-li'
+    Array.from(allImages).forEach(imgItem => {
+    // If the data-filters attribute is present and its value is not 'short-hair'
+    if (imgItem.hasAttribute('data-filters') && imgItem.getAttribute('data-filters') !== 'Partner-van-de-club') {
+        // Voeg de 'hidden' klasse toe
+        imgItem.classList.add('hidden');
+    } else {
+        // Als de 'hidden' klasse al is toegevoegd, verwijder deze
+        imgItem.classList.remove('hidden');
+    }
+});
+}
+
+function showOnlyHarryPotterfanImg(){
+    // Loop through each element with class 'img-li'
+    Array.from(allImages).forEach(imgItem => {
+    // If the data-filters attribute is present and its value is not 'short-hair'
+    if (imgItem.hasAttribute('data-filters') && imgItem.getAttribute('data-filters') !== 'HarryPotterfan') {
+        // Voeg de 'hidden' klasse toe
+        imgItem.classList.add('hidden');
+    } else {
+        // Als de 'hidden' klasse al is toegevoegd, verwijder deze
+        imgItem.classList.remove('hidden');
+    }
+});
+}
+
+
+function showOnlyIsStiekemEenDesignerImg(){
+    console.log('Toggle All Images function called');
+  // Loop through each element with class 'img-li'
+  Array.from(allImages).forEach(imgItem => {
+    // If the data-filters attribute is present and its value is not 'short-hair'
+    if (imgItem.hasAttribute('data-filters') && imgItem.getAttribute('data-filters') !== 'Is-stiekem-een-designer') {
+        // Voeg de 'hidden' klasse toe
+        imgItem.classList.add('hidden');
+    } else {
+        // Als de 'hidden' klasse al is toegevoegd, verwijder deze
+        imgItem.classList.remove('hidden');
+    }
+});
+}
+
+function showOnlyFrontEndImg(){
+    console.log('Toggle All Images function called');
+// Loop through each element with class 'img-li'
+Array.from(allImages).forEach(imgItem => {
+    // If the data-filters attribute is present and its value is not 'short-hair'
+    if (imgItem.hasAttribute('data-filters') && imgItem.getAttribute('data-filters') !== 'Front-end') {
+        // Voeg de 'hidden' klasse toe
+        imgItem.classList.add('hidden');
+    } else {
+        // Als de 'hidden' klasse al is toegevoegd, verwijder deze
+        imgItem.classList.remove('hidden');
+    }
+});
+}
+
 
 // menu toggle functie
 function menuToggle(){
@@ -41,6 +111,16 @@ function menuToggle(){
         console.log('Menu is currently hidden. Showing it.');
         menu.style.display = 'block';
     }
+}
+function showFilteredImages(filter) {
+    allImages.forEach(imgItem => {
+        let imgDataFilters = imgItem.getAttribute('data-filters');
+        if (imgDataFilters === filter || filter === 'all') {
+            imgItem.classList.remove('hidden');
+        } else {
+            imgItem.classList.add('hidden');
+        }
+    });
 }
 
 // logo shake
