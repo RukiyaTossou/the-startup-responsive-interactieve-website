@@ -11,6 +11,10 @@
    /* font */
    --headings-font-family:"proxima-nova", sans-serif;
    --headings-font-weight:900;
+   /* buttons */
+   --show-all-filters-background:#fff;
+   --show-all-filters-background-hover:#84BC2D;
+   --show-all-filters-background-border-color:#749450;;
 }
 
 @font-face {
@@ -87,15 +91,31 @@
    font-weight: var(--headings-font-weight);
    line-height: 110%;
  }
+/* Hamburger menu */
+.menu-button{
+  position: relative;
+ top:2rem;
+ left:4rem;
+  color: var(--nav-tekst-kleur) ;
+ border-style:none;
+ background:transparent;
 
-/* nav bar */
-.nav-bar{
+}
+.hamburger-icon{
+  color: var(--nav-tekst-kleur);
+  scale: 1.3;
+ position:relative;
+  top:3.1rem;
+ left:2.6rem;
+ 
+}
+
+/* na v bar */
+.ul-navbar{
    list-style: none;
+   padding: 3rem;
 }
 
-.nav-bar li{
-  
-}
 
 .nav-bar a{
    text-decoration: none;
@@ -112,12 +132,13 @@
    object-fit:cover ;
    width: 10rem;
    height: 12rem;
-
+   border-radius: 5px;  
 }
 .art-img{
   object-fit:cover ;
   width: 10rem;
   height: 12rem;
+  border-radius: 5px;
 }
 
 .ul-images-people{
@@ -150,11 +171,12 @@
   display: none;
 }
 .show-all-filters{
-   background-color: #92c6a3;
-   border-color: #3b9c50;
+   background-color:var(--show-all-filters-background);
+   border-color:var(--show-all-filters-background-border-color);
    border-radius: 5px;
    padding: 0.2rem 1rem;
    margin-bottom: 1rem;
+ 
 }
 .filters-all{
    background-color: #b8d3b7;
@@ -168,11 +190,16 @@
 /* hovers */
 .filters-all:hover{
    background-color: var(--nav-tekst-kleur);
-
+  
 }
 
 .show-all-filters:hover{
-  background-color: #b8d3b7;
+  background-color:var(--show-all-filters-background-hover);
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
 }
 
 .hidden{
@@ -229,6 +256,16 @@ button.active{
 }
 
 
+/*  keyframes*/
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
 
   /* MEDIA QUERIES */
   /* Moblie */
@@ -239,6 +276,24 @@ button.active{
   }
 
   @media (max-width: 600px) {
+    .ul-navbar{
+      list-style: none;
+        position:fixed;
+     top:6rem;
+     left:-2rem;
+     width:15rem;
+     height:55rem;
+     z-index:2;
+     background-color:#e0dfdf;
+     padding:4rem;
+    }
+    .ul-navbar li{
+     padding:1rem;
+    }
+    .close-icon{
+
+      
+    }
    .ul-images-people{
    }
    .Onze-mensen-tekst{
@@ -249,6 +304,7 @@ button.active{
  }
    h1{
     text-align: center;
+    padding-top:6rem;
      padding-left:1rem;
    }
    .logo-img{
@@ -268,6 +324,23 @@ button.active{
   }
   /* tablet */
 @media (min-width: 601px) and (max-width: 720px) {
+  .ul-navbar{
+    list-style: none;
+      position:fixed;
+   top:6rem;
+   left:-2rem;
+   width:15rem;
+   height:55rem;
+   z-index:2;
+   background-color:#e0dfdf;
+   padding:4rem;
+  }
+  .ul-navbar li{
+   padding:1rem;
+  }
+
+    
+
    .ul-images-people {
      max-width: 40rem;
      display: flex;
@@ -278,7 +351,7 @@ button.active{
    .ul-images-people li {
      flex: 0 0 calc(30% - 1rem);
      margin-bottom: 1rem;
-   
+ 
      flex-direction: column;
    }
  
@@ -293,11 +366,12 @@ button.active{
  }
   h1{
     text-align: center;
+     padding-top:5rem;
      padding-left:1rem;
    }
  .show-all-filters{
    position:relative;
-   left:5rem;
+   left:3rem;
   }
   .filters{
     padding-left: 5rem;
@@ -309,11 +383,17 @@ button.active{
     left: 50%;
    transform: translate(-50%, -50%)
   }
+
  }
  
  /* Additional tablet */
  @media (min-width: 720px) and (max-width: 1023px) {
-   .ul-images-people {
+    body{
+      text-align: center;
+      padding-left:5rem;
+     
+   }
+  .ul-images-people {
      max-width: 50rem;
    }
  
@@ -332,9 +412,29 @@ button.active{
     left: 50%;
    transform: translate(-50%, -50%)
   }
+  .menu-button{
+    display:none;
+  }
+  .hamburger-icon{
+     display:none;
+  }
+  .ul-navbar{
+  position:relative;
+   top:2rem;
+   right:1rem;
+
+   
+  }
+  .ul-navbar li{
+    display: inline-block;
+    padding: 1.4rem;
+    transform: translateX(-50%);
+ }
+  
   h1{
    text-align:center;
-   padding:1rem;
+   padding-top:5rem;
+    padding-left:1rem;
   }
   .Onze-mensen-tekst{
    max-width:40rem;
@@ -344,7 +444,7 @@ button.active{
 }
   .show-all-filters{
    position:relative;
-   left:5rem;
+   right:15rem;
   }
   .filters{
     padding-left: 5rem;
@@ -359,6 +459,14 @@ button.active{
       padding-left:5rem;
      
    }
+   /* Hamburger menu */
+.menu-button{
+  display:none;
+}
+.hamburger-icon{
+   display:none;
+}
+
   .ul-images-people {
      max-width: 60rem;
    }
