@@ -37,7 +37,7 @@
  @font-face {
    font-family: "ff-tisa-sans-web-pro";
    font-display: swap;
-   src: url("/fonts/tisa-sans-web-pro-400-italic.woff2") format("woff2");
+   src: url("./fonts/tisa-sans-web-pro-400-italic.woff2") format("woff2");
    font-weight: 400;
    font-style: italic;
  }
@@ -53,7 +53,7 @@
  @font-face {
    font-family: "proxima-nova";
    font-display: swap;
-   src: url("/fonts/proxima-nova-900.woff2") format("woff2");
+   src: url("./fonts/proxima-nova-900.woff2") format("woff2");
    font-weight: 900;
    font-style: normal;
  }
@@ -61,7 +61,7 @@
  @font-face {
    font-family: "proxima-nova";
    font-display: fallback;
-   src: url("/fonts/proxima-nova-300.woff2") format("woff2");
+   src: url("./fonts/proxima-nova-300.woff2") format("woff2");
    font-weight: 300;
    font-style: normal;
  }
@@ -99,13 +99,13 @@
   border-style:none;
   background:transparent;
 }
+
 .hamburger-icon{
   color: var(--nav-tekst-kleur);
   scale: 1.3;
- position:relative;
+  position:relative;
   top:3.1rem;
- left:2.6rem;
- 
+  left:2.6rem; 
 }
 
 /* na v bar */
@@ -114,7 +114,6 @@
    padding: 3rem;
    display: block;
 }
-
 
 .nav-bar a{
    text-decoration: none;
@@ -133,6 +132,7 @@
    height: 12rem;
    border-radius: 5px;  
 }
+
 .art-img{
   object-fit:cover ;
   width: 10rem;
@@ -169,6 +169,7 @@
 .filters{
   display: none;
 }
+
 .show-all-filters{
    background-color:var(--show-all-filters-background);
    border-color:var(--show-all-filters-background-border-color);
@@ -177,6 +178,7 @@
    margin-bottom: 1rem;
  
 }
+
 .filters-all{
    background-color: #b8d3b7;
    cursor: pointer;  
@@ -186,6 +188,7 @@
    margin:0.2rem;
    box-shadow: 0px 1px 2px    #212121;
 }
+
 /* hovers */
 .filters-all:hover{
    background-color: var(--nav-tekst-kleur);
@@ -208,6 +211,7 @@
 .show{
   display: block;
 }
+
 button.active{
   background-color: #3b9c50;
   color: #fff;
@@ -217,14 +221,14 @@ button.active{
    padding: 0.5rem;
    margin:0.2rem;
    box-shadow: 0px 1px 2px    #212121;
-
 }
-/* tekst */
 
+/* tekst */
 .Onze-mensen-tekst{
    max-width:30rem;
    align-items: center;
 }
+
 /* cardflip */
 .card-container {
   perspective: 1000px;
@@ -235,7 +239,7 @@ button.active{
   width: 200px; /* Set a fixed width for the card */
   height: 300px; /* Set a fixed height for the card */
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 2s;
 }
 
 .card:hover {
@@ -265,7 +269,6 @@ button.active{
 }
 
 
-
   /* MEDIA QUERIES */
   /* Moblie */
 @media (min-width: 1px) and (max-width:310px){
@@ -274,20 +277,20 @@ button.active{
    }
   }
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
     .ul-navbar{
-      
       list-style: none;
       position:fixed;
-     top:6rem;
-     left:-2rem;
-     width:15rem;
-     height:55rem;
-     z-index:2;
-     background-color:#84bc2d;;
-     color: #212121;
-     padding:4rem;
+      top:6rem;
+      left:-2rem;
+      width:15rem;
+      height:55rem;
+      z-index:2;
+      background-color:#84bc2d;;
+      color: #212121;
+      padding:4rem;
     }
+ 
     .ul-navbar {
       display: none; /* Hide the menu on mobile by default */
     }
@@ -295,33 +298,38 @@ button.active{
     .ul-navbar li{
      padding:1rem;
     }
-    .close-icon{
-
-      
+   
+    .close-icon{ 
     }
+   
    .ul-images-people{
    }
+   
    .Onze-mensen-tekst{
     max-width:30rem;
     text-align: center;
     margin: 0 auto;
     padding:2rem 0.7rem;
  }
+   
    h1{
     text-align: center;
     padding-top:6rem;
      padding-left:1rem;
    }
+   
    .logo-img{
     position: absolute;
     top:4%;
     left: 50%;
    transform: translate(-50%, -50%)
   }
+   
     .show-all-filters{
    position:relative;
    left:2rem;
   }
+   
   .filters{
     padding-left: 2rem;
    
@@ -340,52 +348,54 @@ button.active{
     background-color:#84bc2d;
     padding:4rem;
   }
+ 
   .ul-navbar li{
    padding:1rem;
-
   }
 
   .ul-navbar {
     display: none; /* Hide the menu on mobile by default */
-   
   }
 
-   .ul-images-people {
+  .ul-images-people {
      max-width: 40rem;
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
    }
  
-   .ul-images-people li {
+  .ul-images-people li {
      flex: 0 0 calc(30% - 1rem);
      margin-bottom: 1rem;
- 
      flex-direction: column;
    }
  
    .info-text-img {
      max-width: 6rem;
    }
+ 
    .Onze-mensen-tekst{
     max-width:30rem;
     text-align: center;
     margin: 0 auto;
     padding:3rem;
  }
+ 
   h1{
     text-align: center;
      padding-top:5rem;
      padding-left:1rem;
    }
+ 
  .show-all-filters{
    position:relative;
    left:3rem;
   }
+ 
   .filters{
-    padding-left: 5rem;
-   
+    padding-left: 5rem; 
   }
+ 
  .logo-img{
     position: absolute;
     top:4%;
@@ -399,9 +409,9 @@ button.active{
  @media (min-width: 720px) and (max-width: 1070px) {
     body{
       text-align:center;
-      padding-left:5rem;
-     
+      padding-left:5rem; 
    }
+  
   .ul-images-people {
      max-width: 50rem;
    }
@@ -417,16 +427,18 @@ button.active{
   
   .logo-img{
     position: absolute;
-  top:4%;
-  left: 50%;
-  transform: translate(-50%, -50%)
+    top:4%;
+    left: 50%;
+    transform: translate(-50%, -50%)
   }
-.ul-navbar li{
+  
+  .ul-navbar li{
    display: inline-block;
    padding: 1rem;
    transform: translateX(-50%);
 }
-.ul-navbar{
+  
+  .ul-navbar{
    position:relative;
    top:2rem;
    right:rem;
@@ -441,9 +453,9 @@ button.active{
   .menu-button{
    display:none;
   }
+  
   .hamburger-icon{
-   display:none;
-   
+   display:none; 
   }
   
   h1{
@@ -451,16 +463,19 @@ button.active{
    padding-top:5rem;
     padding-left:1rem;
   }
+  
   .Onze-mensen-tekst{
    max-width:40rem;
    text-align: center;
    margin: 0 auto;
    padding:2rem;
-}
+ }
+  
   .show-all-filters{
    position:relative;
    right:15rem;
   }
+  
   .filters{
     padding-left: 5rem;
   }
@@ -474,50 +489,51 @@ button.active{
       padding-left:5rem;
    }
    /* Hamburger menu */
-.menu-button{
+  .menu-button{
   display:none;
-}
-.hamburger-icon{
+  }
+   
+  .hamburger-icon{
    display:none;
-}
+  }
 
   .ul-images-people {
-   
      max-width: 60rem;
    }
  
-   .ul-images-people li {
+  .ul-images-people li {
      flex: 0 0 calc(15% - 1rem);
      /* display: flex; */
      flex-direction: column;
    }
+   
    .ul-navbar {
     display: block;
   }
+   
   .nav-bar a{
     color:var(--nav-tekst-kleur);
  }
-
-
+   
   .logo-img{
-    position: absolute;
-  top:4%;
-  left: 50%;
-  transform: translate(-50%, -50%)
+   position: absolute;
+   top:4%;
+   left: 50%;
+   transform: translate(-50%, -50%)
   }
-.ul-navbar li{
+   
+  .ul-navbar li{
    display: inline-block;
    padding: 3rem;
    transform: translateX(-50%);
 }
 
-
-.show-all-filters{
+  .show-all-filters{
   position:relative;
   right:18rem;
  }
  
-.Onze-mensen-tekst{
+  .Onze-mensen-tekst{
    max-width:40rem;
    text-align: center;
    margin: 0 auto;

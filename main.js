@@ -8,6 +8,7 @@ let FrontEndButton = document.querySelector('.filters-all[data-filters="Front-en
 let PartnerVanDeClubButton = document.querySelector('.filters-all[data-filters="Partner-van-de-club"]')
 let IsStiekemEenDesignerButton = document.querySelector('.filters-all[data-filters="Is-stiekem-een-designer"]');
 let HarryPotterfanButton = document.querySelector('.filters-all[data-filters="HarryPotterfan"]');
+let AllButton = document.querySelector('.filters-all[data-filters="all"]');
 let teskst = document.querySelector('.Onze-mensen-tekst');
 let Logo = document.querySelectorAll('.shake');
 
@@ -25,9 +26,18 @@ FrontEndButton.addEventListener('click',showOnlyFrontEndImg);
 PartnerVanDeClubButton.addEventListener('click',showOnlyPartnerVanDeClubImg);
 HarryPotterfanButton.addEventListener('click',showOnlyHarryPotterfanImg);
 IsStiekemEenDesignerButton.addEventListener('click', showOnlyIsStiekemEenDesignerImg);
+AllButton.addEventListener('click', showAllFiltersImg);
 
 // Logo.addEventListener('click', shake);
 menuButton.addEventListener('click', menuToggle)
+
+function showAllFiltersImg(){
+    // Loop through each element with class 'img-li'
+    Array.from(allImages).forEach(imgItem => {
+        // Verwijder de 'hidden' klasse
+        imgItem.classList.remove('hidden');
+    });
+}
 
 function showOnlyShortHairImg(){
     // Loop through each element with class 'img-li'
@@ -42,6 +52,7 @@ function showOnlyShortHairImg(){
         }
     });
 }
+
 function showOnlyPartnerVanDeClubImg(){
        // Loop through each element with class 'img-li'
     Array.from(allImages).forEach(imgItem => {
@@ -69,7 +80,6 @@ function showOnlyHarryPotterfanImg(){
     }
 });
 }
-
 
 function showOnlyIsStiekemEenDesignerImg(){
     console.log('Toggle All Images function called');
@@ -100,6 +110,7 @@ Array.from(allImages).forEach(imgItem => {
     }
 });
 }
+
 
 
 // menu toggle functie
